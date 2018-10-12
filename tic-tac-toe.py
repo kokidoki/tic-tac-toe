@@ -97,7 +97,7 @@ while lose == False:
 			player_go = False
 			lose = True	
 			break
-		break	
+	break	
 		x_or_y = computer_piece
 		win = "Computer wins!"
 	if (board_values[0][0] == 'X' or board_values[0][0] == 'O') and\
@@ -155,4 +155,4 @@ while lose == False:
 			player_go = False
 			lose = True	
 			break
-
+	break		
