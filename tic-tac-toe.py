@@ -29,9 +29,6 @@ def computer_turn(board_values, computer_piece):
 		randindex = board_values[randnum1][randnum2]
 		if randindex == " ":
 			no_replace = True
-			print("debug")
-			print(board_values, randnum1, randnum2, computer_piece)
-			print(board_values[randnum1][randnum2])
 			board_values[randnum1][randnum2] = computer_piece
 		else:
 			randnum1 = random.randint(0, 2)
@@ -60,38 +57,45 @@ while lose == False:
 	player_go = player_turn(board_values, player_piece)
 	x_or_y = player_piece
 	win = "Player wins!"
-	show_board(board_values)
 	for x in range(2):
 		if board_values[0][0] == x_or_y and board_values[0][1] == x_or_y and board_values[0][2] == x_or_y:
 			print(win)
+			show_board(board_values)
 			lose = True
 			break
 		if board_values[0][0] == x_or_y and board_values[1][0] == x_or_y and board_values[2][0] == x_or_y:
 			print(win)
+			show_board(board_values)
 			lose = True
 			break
 		if board_values[0][0] == x_or_y and board_values[1][1] == x_or_y and board_values[2][2] == x_or_y:
 			print(win)
+			show_board(board_values)
 			lose = True	
 			break
 		if board_values[0][2] == x_or_y and board_values[1][2] == x_or_y and board_values[2][2] == x_or_y:
 			print(win)
+			show_board(board_values)
 			lose = True
 			break
 		if board_values[2][0] == x_or_y and board_values[2][1] == x_or_y and board_values[2][2] == x_or_y:
 			print(win)
+			show_board(board_values)
 			lose = True
 			break
 		if board_values[2][0] == x_or_y and board_values[1][1] == x_or_y and board_values[0][2] == x_or_y:
 			print(win)
+			show_board(board_values)
 			lose = True
 			break
 		if board_values[0][1] == x_or_y and board_values[1][1] == x_or_y and board_values[2][1] == x_or_y:	
 			print(win)
+			show_board(board_values)
 			lose = True
 			break
 		if board_values[1][0] == x_or_y and board_values[1][1] == x_or_y and board_values[1][2] == x_or_y:
 			print(win)
+			show_board(board_values)
 			lose = True	
 			break
 		x_or_y = computer_piece
@@ -106,9 +110,10 @@ while lose == False:
 	  (board_values[2][1] == 'X' or board_values[2][1] == 'O') and\
 	  (board_values[2][2] == 'X' or board_values[2][2] == 'O'):
 		print("It's a draw!")
+		show_board(board_values)
 		break
-	print("debug:", player_go)
-	if player_go == True:		
+	if player_go:		
 		computer_turn(board_values, computer_piece)
+	show_board(board_values)
 	
 
