@@ -52,6 +52,7 @@ if player_piece == 'X':
 	computer_piece = 'O'
 else:
 	computer_piece = 'X'
+break_var = False
 while lose == False:
 	player_go = True
 	player_go = player_turn(board_values, player_piece)
@@ -61,45 +62,54 @@ while lose == False:
 		if board_values[0][0] == x_or_y and board_values[0][1] == x_or_y and board_values[0][2] == x_or_y:
 			print(win)
 			player_go = False
+			break_var = True
 			lose = True
 			break
 		if board_values[0][0] == x_or_y and board_values[1][0] == x_or_y and board_values[2][0] == x_or_y:
 			print(win)
 			player_go = False
+			break_var = True
 			lose = True
 			break
 		if board_values[0][0] == x_or_y and board_values[1][1] == x_or_y and board_values[2][2] == x_or_y:
 			print(win)
 			player_go = False
+			break_var = True
 			lose = True	
 			break
 		if board_values[0][2] == x_or_y and board_values[1][2] == x_or_y and board_values[2][2] == x_or_y:
 			print(win)
 			lose = True
+			break_var = True
 			break
 		if board_values[2][0] == x_or_y and board_values[2][1] == x_or_y and board_values[2][2] == x_or_y:
 			print(win)
 			player_go = False
+			break_var = True
 			lose = True
 			break
 		if board_values[2][0] == x_or_y and board_values[1][1] == x_or_y and board_values[0][2] == x_or_y:
 			print(win)
 			player_go = False
+			break_var = True
 			lose = True
 			break
 		if board_values[0][1] == x_or_y and board_values[1][1] == x_or_y and board_values[2][1] == x_or_y:	
 			print(win)
 			player_go = False
+			break_var = True
 			lose = True
 			break
 		if board_values[1][0] == x_or_y and board_values[1][1] == x_or_y and board_values[1][2] == x_or_y:
 			print(win)
 			player_go = False
+			break_var = True
 			lose = True	
-			break
-	break	
-		x_or_y = computer_piece
-		win = "Computer wins!"
+			break	
+	if break_var = True:
+		break
+	x_or_y = computer_piece
+	win = "Computer wins!"
 	if (board_values[0][0] == 'X' or board_values[0][0] == 'O') and\
 	  (board_values[0][1] == 'X' or board_values[0][1] == 'O') and\
 	  (board_values[0][2] == 'X' or board_values[0][2] == 'O') and\
@@ -119,40 +129,49 @@ while lose == False:
 		if board_values[0][0] == x_or_y and board_values[0][1] == x_or_y and board_values[0][2] == x_or_y:
 			print(win)
 			player_go = False
+			break_var = True
 			lose = True
 			break
 		if board_values[0][0] == x_or_y and board_values[1][0] == x_or_y and board_values[2][0] == x_or_y:
 			print(win)
 			player_go = False
+			break_var = True
 			lose = True
 			break
 		if board_values[0][0] == x_or_y and board_values[1][1] == x_or_y and board_values[2][2] == x_or_y:
 			print(win)
 			player_go = False
+			break_var = True
 			lose = True	
 			break
 		if board_values[0][2] == x_or_y and board_values[1][2] == x_or_y and board_values[2][2] == x_or_y:
 			print(win)
+			break_var = True
 			lose = True
 			break
 		if board_values[2][0] == x_or_y and board_values[2][1] == x_or_y and board_values[2][2] == x_or_y:
 			print(win)
 			player_go = False
+			break_var = True
 			lose = True
 			break
 		if board_values[2][0] == x_or_y and board_values[1][1] == x_or_y and board_values[0][2] == x_or_y:
 			print(win)
 			player_go = False
+			break_var = True
 			lose = True
 			break
 		if board_values[0][1] == x_or_y and board_values[1][1] == x_or_y and board_values[2][1] == x_or_y:	
 			print(win)
 			player_go = False
+			break_var = True
 			lose = True
 			break
 		if board_values[1][0] == x_or_y and board_values[1][1] == x_or_y and board_values[1][2] == x_or_y:
 			print(win)
 			player_go = False
+			break_var = True
 			lose = True	
-			break
-	break		
+			break	
+	if break_var = True:
+		break
