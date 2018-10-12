@@ -114,7 +114,7 @@ while lose == False:
 			break_var = True
 			lose = True	
 			break	
-	if break_var = True:
+	if break_var == True:
 		break
 	x_or_y = computer_piece
 	win = "Computer wins!"
@@ -189,5 +189,5 @@ while lose == False:
 			break_var = True
 			lose = True	
 			break	
-	if break_var = True:
+	if break_var == True:
 		break
