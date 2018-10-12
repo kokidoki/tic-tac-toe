@@ -52,6 +52,7 @@ if player_piece == 'X':
 	computer_piece = 'O'
 else:
 	computer_piece = 'X'
+show_board(board_values)
 break_var = False
 while lose == False:
 	player_go = True
